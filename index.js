@@ -1,9 +1,10 @@
 import {
   NativeModules,
   NativeEventEmitter,
+  Platform,
 } from 'react-native';
-// export default NativeModules.CNTTS;
-const CNTTS = NativeModules.CNTTS;
+
+const CNTTS = Platform.OS == 'android' ? NativeModules.CNTTS : {};
 
 class Tts extends NativeEventEmitter {
     constructor() {
