@@ -14,6 +14,17 @@ react-native link react-native-cn-tts
 1. 账号注册： [百度语音](https://passport.baidu.com/v2/?reg&tpl=open_audio&u=http://yuyin.baidu.com/)
 2. 创建应用： 应用管理内创建应用 - 输入名称 - 启动语音合成服务 - 选择Android平台 - 输入最终想要集成到的App包名，如com.symous.cntts
 3. 获取授权信息： 在现有应用列表内，找到创建的应用，可查看到App ID／Api Key／Secret Key
+4. 需要配置以下权限 (AndroidManifest.xml 文件)
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+```
 
 ## 开始使用
 ```js
