@@ -112,7 +112,7 @@ public class BaiduTTS implements SpeechSynthesizerListener{
 
     @Override
     public void onError(String s, SpeechError speechError) {
-        callBack.onError(s);
+        callBack.onError(s, speechError);
     }
 
     public void copySpeechFileFromAssert(Context context,String oldPath,String newPath) {
